@@ -1,25 +1,32 @@
 # syedfahadrizvi.github.io
 
-Personal portfolio site for Syed Muhammad Fahad Rizvi — Senior Machine Learning Engineer
-(computer vision, 3D reconstruction, multi-object tracking, MLOps). Static, hand-written
-HTML/CSS with no build step, served via GitHub Pages.
+Personal academic portfolio for **Syed Muhammad Fahad Rizvi** — Senior Machine Learning Engineer
+(computer vision, 3D reconstruction, multi-object tracking, MLOps). Built with the
+[al-folio](https://github.com/alshedivat/al-folio) Jekyll theme (gem-based, `theme: al_folio_core`).
 
 ## Structure
 
-| Page | Path |
-| --- | --- |
-| Home / overview | `index.html` |
-| Projects index | `projects.html` |
-| Experience & education | `experience.html` |
-| Label-Free Detector Training | `projects/label-free-detection.html` |
-| Modular Neural Photogrammetry Pipeline | `projects/photogrammetry.html` |
-| US DOT Intersection Safety Challenge | `projects/dot-challenge.html` |
-| Vulnerable Road User Tracking | `projects/vru-tracking.html` |
-| Automated Single-Camera Calibration | `projects/camera-calibration.html` |
+- `_config.yml` — site configuration and identity.
+- `_pages/about.md` — homepage (`/`).
+- `_pages/projects.md` — projects grid (`/projects/`).
+- `_pages/cv.md` — CV page (`/cv/`), rendered from `_data/cv.yml` (rendercv format).
+- `_projects/*.md` — five project case studies (photogrammetry, label-free detection,
+  US DOT challenge, VRU tracking, camera calibration). Pipeline diagrams use Mermaid.
+- `_data/socials.yml` — social links (GitHub, LinkedIn, email).
+- `assets/` — images (incl. `img/photogrammetry-grid.jpg`) and theme assets.
 
-- `styles.css` — shared stylesheet (light/dark aware, responsive, print styles).
-- `assets/` — images (e.g. the photogrammetry comparison grid).
+## Build & deploy
 
-Project case-study content is derived from the LaTeX technical portfolio; pipeline diagrams
-are reimplemented as CSS flow diagrams. To preview locally: `python3 -m http.server` and open
-<http://localhost:8000>.
+GitHub Pages cannot build al-folio natively (it uses unsupported plugins), so
+`.github/workflows/deploy.yml` builds the site on GitHub Actions and publishes `_site/` to the
+`gh-pages` branch on every push to `main`. GitHub Pages must be configured to serve from
+`gh-pages`.
+
+### Local preview (requires Ruby)
+
+```bash
+bundle install
+bundle exec jekyll serve
+```
+
+Then open <http://localhost:4000>.

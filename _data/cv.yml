@@ -1,0 +1,107 @@
+cv:
+  name: Syed Muhammad Fahad Rizvi
+  label: Senior Machine Learning Engineer
+  email: syed.m.fahad.rizvi@gmail.com
+  location: Dubai, United Arab Emirates
+  image: ""
+  summary: >
+    Machine learning engineer specializing in computer vision and deep learning for the physical
+    world — object detection, multi-object tracking, sensor fusion, camera geometry, and 3D
+    reconstruction — delivered through production MLOps pipelines.
+
+  social_networks:
+    - network: GitHub
+      username: syedfahadrizvi
+    - network: LinkedIn
+      username: syedfahadrizvi
+
+  sections:
+    Experience:
+      - company: Georgia Institute of Technology
+        position: Graduate Research Assistant
+        location: Remote
+        start_date: 2026-01
+        end_date: present
+        summary: >
+          Research Master's Project on photogrammetry of museum specimens in the Human-Augment
+          Analytics Group, advised by Dr. Arthur Porto (Principal Investigator).
+        highlights:
+          - Built a modular photogrammetry pipeline pairing interchangeable SfM backends (COLMAP, VGGT) with surface-aware 3D Gaussian Splatting mesh extraction (SuGaR, 2DGS, PGSR).
+          - Achieved geometry comparable to commercial Reality Scan, reconstructing 138 6K images in ~40 min on a single A100.
+
+      - company: Derq
+        position: Senior Machine Learning Engineer
+        location: Dubai, UAE
+        start_date: 2025-01
+        end_date: present
+        highlights:
+          - "Leading research on label-free detector training: foundation models retrieve nearest-neighbor source data for a target domain, paired with knowledge distillation from a stronger teacher."
+          - Leading MLOps pipeline development for human-in-the-loop annotation, detector training, and evaluation.
+          - Leading research on Vulnerable Road User (pedestrian, bicyclist) tracking and on automated camera calibration via geometric and deep learning methods.
+
+      - company: Derq
+        position: Machine Learning Engineer III
+        location: Dubai, UAE
+        start_date: 2024-01
+        end_date: 2024-12
+        highlights:
+          - Drove object detection, camera–LiDAR sensor fusion, and pipeline setup for the winning US DOT Intersection Safety Challenge submission (Stage 1B).
+          - Led motion model and data association experiments that improved Multi-Camera Multi-Object Tracking at traffic intersections.
+
+      - company: Derq
+        position: Machine Learning Engineer II
+        location: Dubai, UAE
+        start_date: 2022-03
+        end_date: 2024-01
+        highlights:
+          - Built calibration tools for fisheye-to-perspective feed selection and radial distortion correction.
+          - Added heading prediction and a Constant Turn-Rate Velocity motion model to improve tracking of turning vehicles.
+
+      - company: Softgarden E-recruiting
+        position: Data Analyst (Part-time)
+        location: Saarbrücken, Germany
+        start_date: 2021-10
+        end_date: 2022-03
+        highlights:
+          - Clustered similar companies based on job postings and frequencies.
+
+      - company: Teradata Global Consulting Pakistan
+        position: Data Analyst
+        location: Islamabad, Pakistan
+        start_date: 2019-10
+        end_date: 2021-09
+        highlights:
+          - Detected anomalies in insurance claim journeys using frequentist and Bayesian statistics.
+          - Built an R Shiny dashboard over claims analyses done in Teradata SQL and Tidyverse.
+          - "As a Technical Consulting Trainee: deployed TensorFlow person detectors and multi-object trackers in DeepStream containers, scaled with Kubernetes; built tree-based models forecasting organ failure indicative of cytokine storm."
+
+    Education:
+      - institution: Georgia Institute of Technology
+        location: Online
+        area: Computer Science
+        studyType: M.S.
+        start_date: 2023-08
+        end_date: 2026-12
+        score: "GPA 4.0 (27/30 credit hours earned)"
+        courses: "Machine Learning, Deep Learning, Bayesian Statistics, Simulation & Modeling"
+
+      - institution: National University of Computer and Emerging Sciences
+        location: Islamabad, Pakistan
+        area: Computer Science
+        studyType: B.S.
+        start_date: 2015-08
+        end_date: 2019-06
+        score: "GPA 3.5"
+        courses: "Deep Learning, Data Mining, Parallel and Distributed Computing, Multi-agent Systems"
+        highlights:
+          - "Honors: Silver Medal (Spring 2018), Rector's List (Spring 2019), Dean's List of Honor (multiple semesters)."
+
+    Skills:
+      - name: Domain Knowledge
+        keywords: "Deep Learning, Computer Vision, Geometric Computer Vision, Statistical Learning"
+      - name: Programming
+        keywords: "Python, C++, SQL, R"
+      - name: Python Packages
+        keywords: "PyTorch, Scikit-Learn, NumPy, Pandas, SciPy, PyMC, StatsModels"
+      - name: MLOps
+        keywords: "AWS SageMaker, Kedro, Docker, Kubernetes"
