@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects — Syed Fahad Rizvi</title>
+<meta name="description" content="Five applied computer vision projects: label-free domain adaptation, neural photogrammetry, multi-sensor tracking, VRU tracking, and automated camera calibration.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="index.html">Syed Fahad Rizvi</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="projects.html" aria-current="page">Projects</a>
+      <a href="experience.html">Experience</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero compact">
+  <div class="wrap">
+    <p class="eyebrow">Technical Portfolio</p>
+    <h1>Projects</h1>
+    <p class="tagline">
+      Five projects in applied computer vision — detection and tracking under real deployment
+      constraints, domain adaptation without labels, camera geometry, and 3D reconstruction.
+    </p>
+  </div>
+</section>
+
+<main id="main">
+
+<section class="wrap section">
+  <div class="cards">
+
+    <a class="card-link" href="projects/label-free-detection.html">
+      <p class="role">Domain Adaptation · Distillation</p>
+      <h3>Label-Free Detector Training</h3>
+      <p>Foundation-model retrieval assembles well-matched source data and two-level
+         distillation transfers it onto a new site — <strong>+10–15 mAP points with zero
+         target-site labels</strong>, removing the two-week annotation step per deployment.</p>
+      <span class="more">Read the case study →</span>
+    </a>
+
+    <a class="card-link" href="projects/photogrammetry.html">
+      <p class="role">3D Reconstruction · SfM · Gaussian Splatting</p>
+      <h3>Modular Neural Photogrammetry Pipeline</h3>
+      <p>Interchangeable SfM backends and surface-aware Gaussian mesh extractors composed across
+         a COLMAP-format boundary — <strong>qualitative parity with commercial Reality Scan</strong>,
+         138 6K images in ~40 min on one A100. Open source.</p>
+      <span class="more">Read the case study →</span>
+    </a>
+
+    <a class="card-link" href="projects/dot-challenge.html">
+      <p class="role">Multi-Sensor Perception · Tracking</p>
+      <h3>US DOT Intersection Safety Challenge</h3>
+      <p>Camera-primary detection and multi-camera tracking, with sparse LiDAR demoted from a
+         detection sensor to the output coordinate frame — <strong>named a Stage 1B winner</strong>.</p>
+      <span class="more">Read the case study →</span>
+    </a>
+
+    <a class="card-link" href="projects/vru-tracking.html">
+      <p class="role">Multi-Object Tracking</p>
+      <h3>Vulnerable Road User Tracking</h3>
+      <p>Asymmetric association and a deliberately simple motion model for pedestrians and
+         cyclists — <strong>tracking that holds up where vehicle-tuned trackers break</strong>.</p>
+      <span class="more">Read the case study →</span>
+    </a>
+
+    <a class="card-link" href="projects/camera-calibration.html">
+      <p class="role">Camera Geometry · Learned 3D Priors</p>
+      <h3>Automated Single-Camera Calibration</h3>
+      <p>Learned 3D priors estimate full intrinsics and extrinsics per camera —
+         <strong>removing the manual correspondence step</strong> from bringing a site online.</p>
+      <span class="more">Read the case study →</span>
+    </a>
+
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p>Syed Muhammad Fahad Rizvi · <a href="mailto:syed.m.fahad.rizvi@gmail.com">syed.m.fahad.rizvi@gmail.com</a></p>
+    <p class="foot-links">
+      <a href="https://github.com/syedfahadrizvi" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/syedfahadrizvi" rel="noopener">LinkedIn</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>

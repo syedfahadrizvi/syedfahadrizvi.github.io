@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vulnerable Road User Tracking — Syed Fahad Rizvi</title>
+<meta name="description" content="Multi-object tracking tuned for pedestrians and cyclists at traffic intersections: asymmetric association and a deliberately simple motion model for road users that break vehicle-tracking assumptions.">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../index.html">Syed Fahad Rizvi</a>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="../index.html">Home</a>
+      <a href="../projects.html" aria-current="page">Projects</a>
+      <a href="../experience.html">Experience</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero compact">
+  <div class="wrap">
+    <p class="breadcrumb"><a href="../projects.html">Projects</a> / Vulnerable Road User Tracking</p>
+    <p class="eyebrow">Multi-Object Tracking</p>
+    <h1>Vulnerable Road User Tracking</h1>
+    <ul class="project-meta">
+      <li><span class="k">Organization</span> <span class="v">Derq · Dubai, UAE</span></li>
+      <li><span class="k">Role</span> <span class="v">Senior ML Engineer — research lead</span></li>
+      <li><span class="k">Period</span> <span class="v">2025 — Present</span></li>
+    </ul>
+  </div>
+</section>
+
+<main id="main">
+<section class="wrap section">
+<div class="prose">
+
+  <p>
+    Trackers at traffic intersections are usually tuned on vehicles, because vehicles dominate the
+    data and behave well. Pedestrians and cyclists — the road users the safety case actually exists
+    to protect — break several assumptions of that tuning at once.
+  </p>
+
+  <h2>Problem Statement</h2>
+  <ul>
+    <li><span class="keyterm">Motion is not smooth.</span> Vehicle motion models assume continuous,
+      constrained trajectories. A pedestrian can stop dead, reverse, or pivot between frames, and
+      none of that violates anything except the model.</li>
+    <li><span class="keyterm">Detections are less stable.</span> VRU bounding boxes fluctuate far
+      more between frames than vehicle boxes, which degrades any association metric that leans on
+      box geometry.</li>
+    <li><span class="keyterm">Detections are lost more often.</span> VRUs blend into visually
+      similar background and are frequently occluded by poles, signage, and other static street
+      furniture — so tracks fragment and must be re-acquired rather than merely maintained.</li>
+  </ul>
+
+  <h2>Approach</h2>
+  <ul>
+    <li><span class="keyterm">Asymmetric association.</span> The association metric was loosened for
+      admitting new detections while kept strict for confirming established tracks. The asymmetry
+      follows directly from the failure modes above: VRU tracks are fragile at birth and after
+      occlusion, so the tracker must be willing to start and re-acquire them, while loose
+      association on confirmed tracks is exactly what produces identity switches among people moving
+      in groups.</li>
+    <li><span class="keyterm">Constant velocity, deliberately.</span> The motion model was held at
+      constant velocity because VRU heading cannot be predicted accurately. This is the opposite of
+      the choice that worked for turning vehicles, where adding heading prediction and a constant
+      turn-rate velocity model measurably improved tracking. A richer motion model pays off when
+      motion is constrained and actively harms when it is not — an unreliable heading estimate does
+      not degrade gracefully, it produces confident predictions in the wrong direction.</li>
+  </ul>
+
+  <h2>Evaluation</h2>
+  <p>
+    Measured with HOTA and IDF1 on an internally collected intersection dataset, which I collected
+    and curated. Public benchmarks skew toward pedestrian-dense scenes with camera geometry unlike a
+    fixed intersection installation, so in-domain data was necessary for the numbers to mean
+    anything operationally.
+  </p>
+
+  <div class="techstack">
+    <h2>Tech stack</h2>
+    <ul class="chips">
+      <li>C++</li><li>Python</li><li>Multi-object tracking</li>
+    </ul>
+  </div>
+
+</div>
+
+<nav class="pager">
+  <a class="back" href="dot-challenge.html">← US DOT Intersection Safety Challenge</a>
+  <a href="camera-calibration.html">Next: Automated Camera Calibration →</a>
+</nav>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p>Syed Muhammad Fahad Rizvi · <a href="mailto:syed.m.fahad.rizvi@gmail.com">syed.m.fahad.rizvi@gmail.com</a></p>
+    <p class="foot-links">
+      <a href="https://github.com/syedfahadrizvi" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/syedfahadrizvi" rel="noopener">LinkedIn</a>
+    </p>
+  </div>
+</footer>
+
+</body>
+</html>
